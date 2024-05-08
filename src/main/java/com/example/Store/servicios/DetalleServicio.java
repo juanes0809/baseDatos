@@ -17,10 +17,10 @@ public class DetalleServicio {
 
     public Detalle guardarDetalle(Detalle datosDetalle) throws Exception{
         try {
-            if (validacionDetalle.validarCostoTotal(datosDetalle.getCostoTotal())){
+            if (!validacionDetalle.validarCostoTotal(datosDetalle.getCostoTotal())){
                 throw new Exception("Costo invalido");
             }
-            if (validacionDetalle.validarCantidadProductos(datosDetalle.getCantidadProductos())){
+            if (!validacionDetalle.validarCantidadProductos(datosDetalle.getCantidadProductos())){
                 throw new Exception("Cantidad invalida");
             }
 

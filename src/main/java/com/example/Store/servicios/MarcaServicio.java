@@ -18,13 +18,13 @@ public class MarcaServicio {
 
     public Marca guardarMarca(Marca datosMarca) throws Exception{
         try {
-            if (validacionMarca.validarNombreMarca(datosMarca.getNombreMarca())){
+            if (!validacionMarca.validarNombreMarca(datosMarca.getNombreMarca())){
                 throw new Exception("Nombre invalido");
             }
-            if (validacionMarca.validarAno(datosMarca.getAnoCreacion())){
+            if (!validacionMarca.validarAno(datosMarca.getAnoCreacion())){
                 throw new Exception("Año invalido");
             }
-            if (validacionMarca.validarNit(datosMarca.getNit())){
+            if (!validacionMarca.validarNit(datosMarca.getNit())){
                 throw new Exception("Nit invalido");
             }
 
